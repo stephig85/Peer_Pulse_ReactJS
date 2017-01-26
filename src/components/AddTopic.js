@@ -92,104 +92,97 @@ class AddTopic extends Component {
       });
   }
 
-    render() {
-      return (
-
-    <div>
-    <MuiThemeProvider>
-      <SimpleMenu />
-    </MuiThemeProvider>
+  render() {
+    return (
+      <div>
+      <MuiThemeProvider>
+        <SimpleMenu />
+      </MuiThemeProvider>
 
       <div className="centerItems">
-  <Col xs={1}/>
-  <Col xs={10}>
-    <p className="add-topic-info">What's the Topic?</p>
-
-    <form>
-      <input
-        className="form-control"
-        type="text"
-        ref="topicTitle"
-        placeholder="Add an Activity &raquo; ex: Where to eat?" />
-    </form>
-
-    <p className="add-topic-info">Decision Deadline</p>
-    <DateSelect>
-    <div className='calendar'>
-    <InfiniteCalendar
-      width={245}
-      height={180}
-      onSelect={this.handleSelectDate.bind(this)}
-      selectedDate={today}
-      disabledDays={[0,6]}
-      minDate={minDate}
-      keyboardSupport={true}
-        />
-    </div>
-    </DateSelect>
-
-
-    <p className="add-topic-info">Add some ideas:</p>
-
-    <form>
-        <input
-        className="form-control"
-        type="text"
-        ref="idea1"
-        placeholder="Add an idea" />
-    </form>
-
-    <Welcome>
-    <form>
-      <input
-        className="form-control"
-        type="text"
-        ref="idea2"
-        placeholder="... " />
-      </form>
-
+        <Col xs={1} md={4} lg={4}/>
+        <Col xs={10} md={4} lg={4}>
+        <p className="add-topic-info">What's the Topic?</p>
 
       <form>
         <input
           className="form-control"
           type="text"
-          ref="idea3"
-          placeholder="..." />
+          ref="topicTitle"
+          placeholder="Add an Activity &raquo; ex: Where to eat?" />
+      </form>
+
+      <p className="add-topic-info">Decision Deadline</p>
+      <DateSelect>
+      <div className='calendar'>
+      <InfiniteCalendar
+        width={245}
+        height={180}
+        onSelect={this.handleSelectDate.bind(this)}
+        selectedDate={today}
+        disabledDays={[0,6]}
+        minDate={minDate}
+        keyboardSupport={true}
+          />
+      </div>
+      </DateSelect>
+
+
+      <p className="add-topic-info">Add some ideas:</p>
+      <form>
+          <input
+          className="form-control"
+          type="text"
+          ref="idea1"
+          placeholder="Add an idea" />
+      </form>
+
+      <Welcome>
+      <form>
+        <input
+          className="form-control"
+          type="text"
+          ref="idea2"
+          placeholder="... " />
         </form>
 
         <form>
           <input
             className="form-control"
             type="text"
-            ref="idea4"
+            ref="idea3"
             placeholder="..." />
           </form>
+
           <form>
             <input
               className="form-control"
               type="text"
-              ref="idea5"
+              ref="idea4"
               placeholder="..." />
             </form>
-        </Welcome>
-          <Button className="saveButton" onClick={ this.handleSubmit.bind(this) }>
             <form>
-            <input
-              type="submit"
-              value="Save" />
-          </form>
-          </Button>
-        </Col>
-        <Col xs={1}/>
+              <input
+                className="form-control"
+                type="text"
+                ref="idea5"
+                placeholder="..." />
+              </form>
+          </Welcome>
+            <Button className="saveButton" variant="raised" color="accent"
+              onClick={ this.handleSubmit.bind(this) }>
+              <form>
+              <input
+                type="submit" />
+            </form>
+            </Button>
+          </Col>
+          <Col xs={1}/>
 
+        </div>
       </div>
-    </div>
-  )
+    )
+  }
 }
-}
 
-
-
-
-
-  export default AddTopic;
+export default AddTopic;
