@@ -16,7 +16,6 @@ class Votes extends Component {
     var firebaseId = this.props.topicKey
     var ideaLocation = firebase.database().ref('/topics/' + firebaseId + '/idea/');
 
-
     this.setState({
       votes: ++this.state.votes
     })
@@ -29,12 +28,7 @@ class Votes extends Component {
           votes: this.state.votes
         })
       }
-
-
     })
-
-
-
 
 console.log('the iddea is', ideaLocation);
       // update in firebase
