@@ -18,10 +18,6 @@ var today = new Date();
 var minDate = Number(new Date()) - (24*60*60*1000) * 7;
 
 import { Col } from 'react-bootstrap';
-
-
-
-
 import Button from 'muicss/lib/react/button';
 
 class AddTopic extends Component {
