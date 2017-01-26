@@ -4,7 +4,6 @@ import Topic from './Topic';
 import { firebase, firebaseListToArray } from '../utils/firebase';
 
 class Topics extends Component {
-
   constructor(props) {
     super(props);
 
@@ -36,9 +35,6 @@ class Topics extends Component {
       })
     }
 
-
-
-
   render() {
     const topics = this.state.topics.map(topic => {
       return <Topic keyObject={ topic.uniqueKey } titleObject={ topic } />
@@ -46,17 +42,12 @@ class Topics extends Component {
 
     return (
       <section id="topicsDiv" className="container-fluid">
-
         <div className="row">
-
         { topics }
-
-
         </div>
       </section>
     )
   }
-
 }
 
 export default Topics
