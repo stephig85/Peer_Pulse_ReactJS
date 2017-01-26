@@ -12,18 +12,14 @@ class UserPhoto extends Component {
 
   componentDidMount() {
     var topicsRef = firebase.database().ref("topics/");
-
       firebase.auth().onAuthStateChanged((userData)=>{
-
-              console.log('user image', userData.photoURL);
-              this.setState({
-                imgurl: userData.photoURL
-              })
-
+        console.log('user image', userData.photoURL);
+        this.setState({
+          imgurl: userData.photoURL
+        })
       })
       console.log('state is: ', this.state.imgurl)
     }
-
 
   render(){
     return(
