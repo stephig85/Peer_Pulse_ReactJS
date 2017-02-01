@@ -98,7 +98,7 @@ class AddTopic extends Component {
       <div className="centerItems">
         <Col xs={1} md={4} lg={4}/>
         <Col xs={10} md={4} lg={4}>
-        <p className="add-topic-info">What's the Topic?</p>
+        <p className="add-topic-info">What is the topic?</p>
 
       <form>
         <input
